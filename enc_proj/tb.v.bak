@@ -1,0 +1,75 @@
+`timescale 10ns / 10ns
+
+module axis_conv_encoder_tb;
+
+// Define parameters
+parameter CLK_PERIOD = 10; // Clock period in ns
+
+// Define inputs and outputs
+reg CLK;
+reg RESET;
+reg S_TVALID;
+wire S_TREADY;
+reg [15:0] S_TDATA;
+reg S_TLAST;
+wire M_TVALID;
+reg M_TREADY;
+wire [80:0] M_TDATA;
+wire M_TLAST;
+
+
+integer               data_file    ; // file handler
+integer               scan_file    ; // file handler
+reg[15:0] captured_data;
+`define NULL 0    
+
+// Instantiate the module under test
+axis_conv_encoder uut (
+    .ACLK(CLK),
+    .ARESET_N(RESET),
+    .S_TVALID(S_TVALID),
+    .S_TREADY(S_TREADY),
+    .S_TDATA(captured_data),
+    .S_TLAST(S_TLAST),
+    .M_TVALID(M_TVALID),
+    .M_TREADY(M_TREADY),
+    .M_TDATA(M_TDATA),
+    .M_TLAST(M_TLAST)
+);
+
+// Clock generation
+always begin
+    #5 CLK = ~CLK;
+end
+
+// Testbench stimulus
+initial begin
+    // Initialize inputs
+	CLK = 0;
+	RESET = 0;
+	S_TVALID = 0;
+	S_TLAST = 0;
+	M_TREADY = 0;
+
+	data_file = $fopen("data.txt", "r");
+	if (data_file == `NULL) begin
+    		$display("data_file handle was NULL");
+    		$finish;
+  	end 
+	#10;
+	RESET=~RESET;
+
+end
+
+always@(negedge CLK)begin
+	if(S_TREADY)begin
+		scan_file = $fscanf(data_file, "%d\n", captured_data); 
+		if (!$feof(data_file)) begin
+			S_TVALID=1;
+		end else begin
+			TVALID=0;
+		end
+	end
+end
+
+endmodule

@@ -1,0 +1,471 @@
+do run.txt.txt
+# encoder.v encoder_tb.v
+# encoder_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:20:20 on May 23,2024
+# vlog -reportprogress 300 encoder.v encoder_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module encoder_tb
+# 
+# Top level modules:
+# 	encoder_tb
+# End time: 16:20:20 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_tb 
+# Start time: 16:20:20 on May 23,2024
+# Loading work.encoder_tb
+# Loading work.lpc_encoder
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 11, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_tb/uut File: encoder_tb.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'OUT_LAST'. The port definition is at: encoder.v(12).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_tb/uut File: encoder_tb.v Line: 23
+# ** Warning: (vsim-3722) encoder_tb.v(23): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gklau  Hostname: KLAUS  ProcessID: 23112
+#           Attempting to use alternate WLF file "./wlftrfkctf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrfkctf
+# 00000000000000000000000000000000000000000000000000000000000000000000000000000000/n
+# 01011111001001001010101000111011111001000100010100000000000000000010100011101010/n
+# 00000000000000000000000000000000000000000000000000000000000000000000000000000000/n
+# 11010110001100100101001101100011010010111001011100000000000000000010001111010100/n
+# 00000000000000000000000000000000000000000000000000000000000000000000000000000000/n
+# 11100000010111100111111011001001000010010011111000000000000000000010001100001001/n
+# 00000000000000000000000000000000000000000000000000000000000000000000000000000000/n
+# 01101110101110010101001101101101001100000100010100000000000000000010101111101001/n
+# 00000000000000000000000000000000000000000000000000000000000000000000000000000000/n
+# 00110000011001010101001101100101010111000110011100000000000000000010000001100011/n
+# 00000000000000000000000000000000000000000000000000000000000000000000000000000000/n
+# 01011111001001001010101000111011111001000100010100000000000000000010100011101010/n
+# 00000000000000000000000000000000000000000000000000000000000000000000000000000000/n
+# 11010110001100100101001101100011010010111001011100000000000000000010001111010100/n
+# 00000000000000000000000000000000000000000000000000000000000000000000000000000000/n
+# 11100000010111100111111011001001000010010011111000000000000000000010001100001001/n
+# 00000000000000000000000000000000000000000000000000000000000000000000000000000000/n
+# 01101110101110010101001101101101001100000100010100000000000000000010101111101001/n
+# 00000000000000000000000000000000000000000000000000000000000000000000000000000000/n
+quit -sim
+# End time: 16:20:35 on May 23,2024, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 7
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# master_axi_s_interface_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:22:18 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# ** Error: (vlog-13069) axi_slave_s.v(10): near "input": syntax error, unexpected input, expecting ')'.
+# -- Compiling module slave_axi_s_interface_tb
+# End time: 16:22:18 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# correct the compilation errors
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# master_axi_s_interface_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:22:34 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 16:22:34 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" master_axi_s_interface_tb 
+# Start time: 16:22:34 on May 23,2024
+# ** Error: (vsim-3170) Could not find 'master_axi_s_interface_tb'.
+#         Searched libraries:
+#             C:/Users/gklau/Desktop/enc_proj/work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run_slave.txt PAUSED at line 10
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# End time: 16:23:12 on May 23,2024, Elapsed time: 0:00:38
+# Errors: 1, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:23:12 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 16:23:12 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" slave_axi_s_interface_tb 
+# Start time: 16:23:12 on May 23,2024
+# Loading work.slave_axi_s_interface_tb
+# Loading work.slave_axi_s_interface
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 12, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 28
+# ** Error: (vsim-3063) Port 'TKEEP' not found in the connected module (7th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 28
+# ** Warning: (vsim-3722) slave_tb.v(28): [TFMPC] - Missing connection for port 'TUSER'.
+# ** Warning: (vsim-3722) slave_tb.v(28): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run_slave.txt PAUSED at line 10
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# End time: 16:23:56 on May 23,2024, Elapsed time: 0:00:44
+# Errors: 1, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:23:57 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 16:23:57 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" slave_axi_s_interface_tb 
+# Start time: 16:23:57 on May 23,2024
+# Loading work.slave_axi_s_interface_tb
+# Loading work.slave_axi_s_interface
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 12, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 28
+# ** Warning: (vsim-3722) slave_tb.v(28): [TFMPC] - Missing connection for port 'TUSER'.
+# ** Warning: (vsim-3722) slave_tb.v(28): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gklau  Hostname: KLAUS  ProcessID: 23112
+#           Attempting to use alternate WLF file "./wlftsscce7".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftsscce7
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# End time: 16:27:53 on May 23,2024, Elapsed time: 0:03:56
+# Errors: 0, Warnings: 6
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:27:53 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 16:27:53 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" slave_axi_s_interface_tb 
+# Start time: 16:27:53 on May 23,2024
+# Loading work.slave_axi_s_interface_tb
+# Loading work.slave_axi_s_interface
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 12, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 28
+# ** Warning: (vsim-3722) slave_tb.v(28): [TFMPC] - Missing connection for port 'TUSER'.
+# ** Warning: (vsim-3722) slave_tb.v(28): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gklau  Hostname: KLAUS  ProcessID: 23112
+#           Attempting to use alternate WLF file "./wlftvayncf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftvayncf
+quit -sim
+# End time: 16:29:33 on May 23,2024, Elapsed time: 0:01:40
+# Errors: 0, Warnings: 6
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:33:05 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 16:33:05 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" slave_axi_s_interface_tb 
+# Start time: 16:33:06 on May 23,2024
+# Loading work.slave_axi_s_interface_tb
+# Loading work.slave_axi_s_interface
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 12, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 27
+# ** Warning: (vsim-3722) slave_tb.v(27): [TFMPC] - Missing connection for port 'TUSER'.
+# ** Warning: (vsim-3722) slave_tb.v(27): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gklau  Hostname: KLAUS  ProcessID: 23112
+#           Attempting to use alternate WLF file "./wlftqqr164".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqqr164
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# End time: 16:34:32 on May 23,2024, Elapsed time: 0:01:26
+# Errors: 0, Warnings: 7
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:34:32 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 16:34:32 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" slave_axi_s_interface_tb 
+# Start time: 16:34:33 on May 23,2024
+# Loading work.slave_axi_s_interface_tb
+# Loading work.slave_axi_s_interface
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 12, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 27
+# ** Warning: (vsim-3722) slave_tb.v(27): [TFMPC] - Missing connection for port 'TUSER'.
+# ** Warning: (vsim-3722) slave_tb.v(27): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gklau  Hostname: KLAUS  ProcessID: 23112
+#           Attempting to use alternate WLF file "./wlftn206dc".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftn206dc
+quit -sim
+# End time: 16:41:40 on May 23,2024, Elapsed time: 0:07:07
+# Errors: 0, Warnings: 6
+# Compile of axi_slave_s.v was successful.
+# Compile of encoder.v was successful.
+# Compile of axi_master_s.v was successful.
+# Compile of axi_lpc_encoder.v was successful.
+# Compile of slave_tb.v failed with 2 errors.
+# Compile of slave_encoder_tb.v was successful.
+# Compile of encoder_tb.v was successful.
+# Compile of master_tb.v was successful.
+# 8 compiles, 1 failed with 2 errors.
+# Compile of axi_slave_s.v was successful.
+# Compile of encoder.v was successful.
+# Compile of axi_master_s.v was successful.
+# Compile of axi_lpc_encoder.v was successful.
+# Compile of slave_tb.v failed with 1 errors.
+# Compile of slave_encoder_tb.v was successful.
+# Compile of encoder_tb.v was successful.
+# Compile of master_tb.v was successful.
+# 8 compiles, 1 failed with 1 error.
+# Compile of axi_slave_s.v was successful.
+# Compile of encoder.v was successful.
+# Compile of axi_master_s.v was successful.
+# Compile of axi_lpc_encoder.v was successful.
+# Compile of slave_tb.v failed with 4 errors.
+# Compile of slave_encoder_tb.v was successful.
+# Compile of encoder_tb.v was successful.
+# Compile of master_tb.v was successful.
+# 8 compiles, 1 failed with 4 errors.
+# Compile of axi_slave_s.v was successful.
+# Compile of encoder.v was successful.
+# Compile of axi_master_s.v was successful.
+# Compile of axi_lpc_encoder.v was successful.
+# Compile of slave_tb.v was successful.
+# Compile of slave_encoder_tb.v was successful.
+# Compile of encoder_tb.v was successful.
+# Compile of master_tb.v was successful.
+# 8 compiles, 0 failed with no errors.
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:49:32 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 16:49:32 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" slave_axi_s_interface_tb 
+# Start time: 16:49:32 on May 23,2024
+# Loading work.slave_axi_s_interface_tb
+# Loading work.slave_axi_s_interface
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 12, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 24
+# ** Warning: (vsim-3722) slave_tb.v(24): [TFMPC] - Missing connection for port 'TUSER'.
+# ** Warning: (vsim-3722) slave_tb.v(24): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gklau  Hostname: KLAUS  ProcessID: 23112
+#           Attempting to use alternate WLF file "./wlftx1459j".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftx1459j
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# End time: 16:50:53 on May 23,2024, Elapsed time: 0:01:21
+# Errors: 0, Warnings: 11
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:50:53 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 16:50:54 on May 23,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" slave_axi_s_interface_tb 
+# Start time: 16:50:54 on May 23,2024
+# Loading work.slave_axi_s_interface_tb
+# Loading work.slave_axi_s_interface
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 12, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 24
+# ** Warning: (vsim-3722) slave_tb.v(24): [TFMPC] - Missing connection for port 'TUSER'.
+# ** Warning: (vsim-3722) slave_tb.v(24): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gklau  Hostname: KLAUS  ProcessID: 23112
+#           Attempting to use alternate WLF file "./wlft6dnyi0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6dnyi0
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+add wave -position insertpoint /slave_axi_s_interface_tb/assert_tlast
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# End time: 16:56:34 on May 23,2024, Elapsed time: 0:05:40
+# Errors: 0, Warnings: 6
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:56:34 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 16:56:34 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" slave_axi_s_interface_tb 
+# Start time: 16:56:34 on May 23,2024
+# Loading work.slave_axi_s_interface_tb
+# Loading work.slave_axi_s_interface
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 12, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 24
+# ** Warning: (vsim-3722) slave_tb.v(24): [TFMPC] - Missing connection for port 'TUSER'.
+# ** Warning: (vsim-3722) slave_tb.v(24): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gklau  Hostname: KLAUS  ProcessID: 23112
+#           Attempting to use alternate WLF file "./wlftjxxhvn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjxxhvn
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# End time: 16:57:01 on May 23,2024, Elapsed time: 0:00:27
+# Errors: 0, Warnings: 6
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:57:01 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 16:57:01 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" slave_axi_s_interface_tb 
+# Start time: 16:57:01 on May 23,2024
+# Loading work.slave_axi_s_interface_tb
+# Loading work.slave_axi_s_interface
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 12, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 24
+# ** Warning: (vsim-3722) slave_tb.v(24): [TFMPC] - Missing connection for port 'TUSER'.
+# ** Warning: (vsim-3722) slave_tb.v(24): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gklau  Hostname: KLAUS  ProcessID: 23112
+#           Attempting to use alternate WLF file "./wlftqyf03v".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqyf03v
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# End time: 16:58:41 on May 23,2024, Elapsed time: 0:01:40
+# Errors: 0, Warnings: 6
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:58:42 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 16:58:42 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" slave_axi_s_interface_tb 
+# Start time: 16:58:42 on May 23,2024
+# Loading work.slave_axi_s_interface_tb
+# Loading work.slave_axi_s_interface
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 12, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 24
+# ** Warning: (vsim-3722) slave_tb.v(24): [TFMPC] - Missing connection for port 'TUSER'.
+# ** Warning: (vsim-3722) slave_tb.v(24): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gklau  Hostname: KLAUS  ProcessID: 23112
+#           Attempting to use alternate WLF file "./wlftx49fni".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftx49fni
+quit -sim
+# End time: 17:14:55 on May 23,2024, Elapsed time: 0:16:13
+# Errors: 0, Warnings: 6
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:45:02 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# ** Error: slave_tb.v(56): (vlog-2730) Undefined variable: 'TKEEP'.
+# End time: 17:45:02 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# correct the compilation errors
+do run_slave.txt
+# axi_slave_s.v slave_tb.v
+# slave_axi_s_interface_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:45:19 on May 23,2024
+# vlog -reportprogress 300 axi_slave_s.v slave_tb.v 
+# -- Compiling module slave_axi_s_interface
+# -- Compiling module slave_axi_s_interface_tb
+# 
+# Top level modules:
+# 	slave_axi_s_interface_tb
+# End time: 17:45:19 on May 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" slave_axi_s_interface_tb 
+# Start time: 17:45:19 on May 23,2024
+# Loading work.slave_axi_s_interface_tb
+# Loading work.slave_axi_s_interface
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 12, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /slave_axi_s_interface_tb/uut File: slave_tb.v Line: 24
+# ** Warning: (vsim-3722) slave_tb.v(24): [TFMPC] - Missing connection for port 'SAMPLE_LAST'.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: gklau  Hostname: KLAUS  ProcessID: 23112
+#           Attempting to use alternate WLF file "./wlftcehvc6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcehvc6
+quit -sim
+# End time: 17:50:58 on May 23,2024, Elapsed time: 0:05:39
+# Errors: 0, Warnings: 7
