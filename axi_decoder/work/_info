@@ -1,0 +1,55 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/gklau/Desktop/axi_decoder
+vdecoder_tb
+Z1 !s110 1716787008
+!i10b 1
+!s100 OcCelQalBFgMjR_TfG^oP2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IgXDdDiL_9`D4VLl>ozV>n3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1716744303
+8decoder_tb.v
+Fdecoder_tb.v
+!i122 0
+L0 3 67
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1716787007.000000
+!s107 decoder_tb.v|decoder.v|
+Z6 !s90 -reportprogress|300|decoder.v|decoder_tb.v|
+!i113 1
+Z7 tCvgOpt 0
+vlpc_decoder
+R1
+!i10b 1
+!s100 b?gmGJK^[d2Ffl]:h?IKz1
+R2
+IKTUAz55=c`8=MTaWzb1Yn1
+R3
+R0
+w1716787003
+8decoder.v
+Fdecoder.v
+!i122 0
+L0 1 156
+R4
+r1
+!s85 0
+31
+R5
+Z8 !s107 decoder_tb.v|decoder.v|
+R6
+!i113 1
+R7
