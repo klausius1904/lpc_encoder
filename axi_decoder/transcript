@@ -1,3 +1,416 @@
 # Compile of decoder.v was successful.
 # Compile of decoder_tb.v was successful.
 # 2 compiles, 0 failed with no errors.
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:52:36 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 08:52:36 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 08:52:36 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+quit -sim
+# End time: 08:53:07 on May 27,2024, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 7
+# Compile of decoder.v failed with 1 errors.
+# Compile of decoder_tb.v was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of decoder.v was successful.
+# Compile of decoder_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:00:17 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 09:00:17 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 09:00:17 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 09:02:26 on May 27,2024, Elapsed time: 0:02:09
+# Errors: 0, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:02:26 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# ** Error: (vlog-13036) decoder.v(92): near "^=": Operator only allowed in SystemVerilog.
+# -- Compiling module decoder_tb
+# End time: 09:02:26 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# correct the compilation errors
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:02:42 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# ** Error: decoder.v(92): Range width must be greater than zero.
+# -- Compiling module decoder_tb
+# End time: 09:02:42 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# correct the compilation errors
+# Compile of decoder.v failed with 8 errors.
+# Compile of decoder_tb.v was successful.
+# 2 compiles, 1 failed with 8 errors.
+# Compile of decoder.v was successful.
+# Compile of decoder_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:26:22 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 09:26:22 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 09:26:22 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 09:34:05 on May 27,2024, Elapsed time: 0:07:43
+# Errors: 0, Warnings: 5
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:34:05 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 09:34:05 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 09:34:05 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 09:35:46 on May 27,2024, Elapsed time: 0:01:41
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:35:46 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# ** Error: decoder.v(118): A begin/end block was found with an empty body.  This is permitted in SystemVerilog, but not permitted in Verilog.  Please look for any stray semicolons.
+# -- Compiling module decoder_tb
+# End time: 09:35:46 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# correct the compilation errors
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:36:00 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 09:36:01 on May 27,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 09:36:01 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 09:40:48 on May 27,2024, Elapsed time: 0:04:47
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:40:48 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 09:40:48 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 09:40:48 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 09:41:54 on May 27,2024, Elapsed time: 0:01:06
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:41:54 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 09:41:54 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 09:41:54 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 09:54:31 on May 27,2024, Elapsed time: 0:12:37
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:54:31 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 09:54:31 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 09:54:32 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 10:02:06 on May 27,2024, Elapsed time: 0:07:34
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:02:06 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 10:02:06 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 10:02:07 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+#          0
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 10:03:33 on May 27,2024, Elapsed time: 0:01:26
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:03:33 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 10:03:33 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 10:03:33 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+#          5
+quit -sim
+# End time: 10:04:58 on May 27,2024, Elapsed time: 0:01:25
+# Errors: 0, Warnings: 1
+# Compile of decoder.v was successful.
+# Compile of decoder_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:12:09 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 10:12:09 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 10:12:09 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 10:12:56 on May 27,2024, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:12:56 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 10:12:56 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 10:12:57 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 10:27:22 on May 27,2024, Elapsed time: 0:14:25
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:27:22 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# ** Error: decoder.v(153): (vlog-3373) Range of part-select [0:15] into 'data_reg' [79:0] is reversed.
+# -- Compiling module decoder_tb
+# End time: 10:27:22 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# correct the compilation errors
+# Compile of decoder.v was successful.
+# Compile of decoder_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:29:07 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 10:29:07 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 10:29:08 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 10:31:23 on May 27,2024, Elapsed time: 0:02:15
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:31:23 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 10:31:23 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 10:31:23 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 10:35:33 on May 27,2024, Elapsed time: 0:04:10
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:35:33 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# ** Warning: decoder.v(77): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: decoder.v(77): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: decoder.v(77): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 10:35:33 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 10:35:33 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 10:36:07 on May 27,2024, Elapsed time: 0:00:34
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:36:08 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 10:36:08 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 10:36:08 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 10:42:07 on May 27,2024, Elapsed time: 0:05:59
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:42:07 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 10:42:07 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 10:42:07 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
+# End time: 10:42:49 on May 27,2024, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:42:49 on May 27,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
+# -- Compiling module lpc_decoder
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 10:42:49 on May 27,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 10:42:50 on May 27,2024
+# Loading work.decoder_tb
+# Loading work.lpc_decoder

@@ -27,7 +27,6 @@ initial begin
 	TDATA=0;
 	TVALID=0;
 	TLAST=0;
-	TUSER=0;
 	OUT_READY=1;
  	#20 ARESET_N=1;
 

@@ -74,7 +74,7 @@ module lpc_decoder(
 			RECEIVE_STATE: begin
 				if(TREADY&TVALID)begin
 					data_nxt=TDATA;
-					out_last_nxt={TLAST, 3'b0};
+					out_last_nxt={TLAST, 0, 0, 0};
 					ready_nxt=0;
 					valid_nxt=0;
 					state_nxt=SYNDROME_STATE;

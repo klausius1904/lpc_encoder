@@ -8,50 +8,48 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/intelFPGA/20.1
+Z0 dC:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder
 vdecoder_tb
-Z0 !s110 1716788959
+Z1 !s110 1716795769
 !i10b 1
-!s100 OcCelQalBFgMjR_TfG^oP2
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I>W0NF2WX=cz68zhMADSXz1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dC:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder
-w1716744303
-8C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder_tb.v
-FC:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder_tb.v
-!i122 1
-L0 3 67
+!s100 ;3=<hPVQI>P]MdGeIaz=d1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IEfhXZK]M1`7`E4@5lF0?@3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1716795765
+8decoder_tb.v
+Fdecoder_tb.v
+!i122 0
+L0 3 68
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1716788959.000000
-!s107 C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder_tb.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder_tb.v|
+Z5 !s108 1716795769.000000
+!s107 decoder_tb.v|decoder.v|
+Z6 !s90 -reportprogress|300|decoder.v|decoder_tb.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z7 tCvgOpt 0
 vlpc_decoder
-R0
-!i10b 1
-!s100 b?gmGJK^[d2Ffl]:h?IKz1
 R1
-IngVkJZ1S92bc5UaAI]LNI1
+!i10b 1
+!s100 A:^ki1OPYnAP;oW`X`ZNi0
 R2
+I2n`5T3SB`XARcoO@Iz;>Q1
 R3
-w1716787003
-8C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder.v
-FC:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder.v
+R0
+w1716795363
+8decoder.v
+Fdecoder.v
 !i122 0
-L0 1 156
+L0 1 161
 R4
 r1
 !s85 0
 31
-!s108 1716788958.000000
-!s107 C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder.v|
-!i113 1
 R5
+Z8 !s107 decoder_tb.v|decoder.v|
 R6
+!i113 1
+R7
