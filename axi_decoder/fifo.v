@@ -39,8 +39,8 @@ module synchronous_fifo #(parameter DEPTH = 8, DATA_WIDTH = 8) (
     end
 
     // Full and Empty flag logic
-    assign FULL = (COUNT == DEPTH);
-    assign EMPTY = (COUNT == 0);
+  assign FULL = ((WR_PTR+1'b1) == RD_PTR);
+  assign EMPTY = (WR_PTR == RD_PTR);
 
 endmodule
 

@@ -63,29 +63,30 @@ module decoder_fifo_tb;
 
 	always@(posedge ACLK or negedge ARESET_N)begin
 		if(ARESET_N && TREADY)begin
-			scan_file = $fscanf(data_file,"%b\n", TDATA);
-			if(~$feof(data_file))begin
-				TVALID=1;
-				cnt_reg = cnt_reg+1;
-				if(cnt_reg == 1920)begin	
-					cnt_reg = 0;
-					TLAST = 1;
-				end else begin
-					TLAST= 0;
-				end
-				if(isStart)begin
-					isStart=0;	
-					TUSER = 1;
-				end else begin
-					TUSER=0;
-				end 
+		scan_file=$fscanf(data_file,"%b\n", TDATA);
+		if(!$feof(data_file))begin
+			cnt_reg=cnt_reg+1;
+			if(cnt_reg==1920)begin
+				cnt_reg=0;
+				TLAST=1;
+			end else begin
+				TLAST=0;
 			end
-			else begin
-				TVALID=0;
-			end
+			TVALID=1;
+			
 		end
-		if(~EMPTY)begin
-			$fwrite(write_file, "%b\n", DATA_OUT);
+		else begin
+			$fclose(data_file);
+			TVALID=0;
 		end
+	end
+	if(~EMPTY)begin
+		$fwrite(write_file, "%b\n", DATA_OUT);
+		if(~TVALID)begin
+			$fclose(data_file);
+			$fclose(write_file);
+			$finish;
+		end
+	end
 	end
 endmodule

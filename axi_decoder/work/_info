@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder
 vdecoder_fifo
-Z1 !s110 1717084902
+Z1 !s110 1717087136
 !i10b 1
 !s100 @@T241KWGG824Kf51Gf?@3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1717084902.000000
+Z5 !s108 1717087136.000000
 !s107 fifo.v|decoder.v|decoder_fifo_tb.v|decoder_fifo.v|
 Z6 !s90 -reportprogress|300|decoder_fifo.v|decoder_fifo_tb.v|
 !i113 1
@@ -34,16 +34,16 @@ Z7 tCvgOpt 0
 vdecoder_fifo_tb
 R1
 !i10b 1
-!s100 C2LG<FXhdNIgeeiF7hISA2
+!s100 c6b8`?4B9g]4M>U;M=Kbz3
 R2
-I[h6VW;zTJbXiY9Ff`B8[73
+IOFma^4C81SCBG@Qj>YDjN1
 R3
 R0
-w1717084578
+w1717087132
 8decoder_fifo_tb.v
 Fdecoder_fifo_tb.v
 !i122 0
-L0 2 90
+L0 2 91
 R4
 r1
 !s85 0
@@ -78,12 +78,12 @@ R7
 vsynchronous_fifo
 R1
 !i10b 1
-!s100 1J_g?GQE]XfdJ[5E`zcVg2
+!s100 ^^=HBG@I3bFED3YI35d^B2
 R2
-IJiM8>_I`Mk85dMXKG0Qk?1
+I@BiIgc8H3P=VoP`@1g;AE2
 R3
 R0
-w1717071167
+w1717085590
 8fifo.v
 Ffifo.v
 !i122 0
