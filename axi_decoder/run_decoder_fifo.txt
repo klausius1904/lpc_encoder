@@ -1,0 +1,16 @@
+set sourcefiles {decoder_fifo.v decoder_fifo_tb.v}
+set topmodule decoder_fifo_tb
+quit -sim
+if [file exists "work"] {vdel -all}
+vlib work
+if [catch "eval vlog $sourcefiles"] {
+	puts "correct the compilation errors"
+	return
+}
+vsim -voptargs=+acc $topmodule
+add wave *
+add wave -position 3  sim:/decoder_fifo_tb/uut/decoder/OUT_DECODED
+add wave -position 4  sim:/decoder_fifo_tb/uut/decoder/OUT_VALID
+add wave -position 5  sim:/decoder_fifo_tb/uut/fifo_data/FULL
+
+run 2000000

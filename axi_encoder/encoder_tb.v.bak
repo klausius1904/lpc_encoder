@@ -1,0 +1,103 @@
+`timescale 1ns/1ns
+
+module encoder_tb;
+
+	reg ACLK;
+	reg ARESET_N;
+	reg [15:0] TDATA;
+	reg TVALID;
+	reg TLAST;
+	wire TREADY;
+	reg TUSER;
+	
+	wire OUT_VALID;
+	wire OUT_LAST;
+	wire [79:0] OUT_DATA;
+	reg OUT_READY;
+
+	integer write_file;
+	integer data_file;
+	integer	scan_file;
+	`define NULL 0
+
+	reg[10:0]cnt_reg;
+	reg isStart;
+
+lpc_encoder uut(
+		.ACLK(ACLK),
+		.ARESET_N(ARESET_N),
+		.TDATA(TDATA),
+		.TVALID(TVALID),
+		.TLAST(TLAST),
+		.TUSER(TUSER),
+		.TREADY(TREADY),
+		.OUT_VALID(OUT_VALID),
+		.OUT_LAST(OUT_LAST),
+		.OUT_DATA(OUT_DATA),
+		.OUT_READY(OUT_READY)
+		);
+
+	always begin #5 ACLK=~ACLK; end
+	initial begin
+		ACLK=0;
+		ARESET_N=0;
+		
+		#20 ARESET_N=1;
+		
+	end
+	initial begin
+		TVALID=0;
+		TLAST=0;
+		OUT_READY=1;
+		cnt_reg=0;
+		isStart=1;
+		TUSER=0;
+		data_file = $fopen("data.txt", "r");
+		if (data_file == `NULL) begin
+    			$display("data_file handle was NULL");
+    			$finish;
+  		end
+
+		write_file = $fopen("data_out.txt", "w");
+		if (write_file == `NULL) begin
+			$display("data_file handle was NULL");
+			$finish;
+		end
+		#20;
+	end
+
+	always@(posedge ACLK or negedge ARESET_N)begin
+		if(TREADY && ARESET_N)begin
+			scan_file = $fscanf(data_file, "%b\n", TDATA); 
+			if (!$feof(data_file)) begin
+				TVALID=1;
+				cnt_reg= cnt_reg+1;
+				if(cnt_reg==1920)begin
+					TLAST=1;
+				end else TLAST=0;
+				if (isStart)begin
+					TUSER=1;
+					isStart=0;
+				end else begin
+					TUSER=0;
+				end
+				
+
+			end else begin
+				TVALID=0;
+						
+			end
+		end
+		if(OUT_VALID & OUT_READY)begin
+			$fwrite(write_file, "%b\n", OUT_DATA);
+			if(~TVALID)begin
+				$fclose(write_file);
+				$fclose(data_file);
+				$finish;
+			end
+		end
+	end
+
+
+endmodule
+

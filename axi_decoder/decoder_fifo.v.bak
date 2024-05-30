@@ -1,0 +1,59 @@
+`include "decoder.v"
+`include "fifo.v"
+module decoder_fifo #(parameter DEPTH=128, DATA_WIDTH=16, LAST_WIDTH=1)(
+	input wire ACLK,
+	input wire ARESET_N,
+	input wire [79:0] TDATA,
+	input wire TVALID,
+	output wire TREADY,
+	input wire TUSER,
+	input wire TLAST,
+	
+	input wire RD_EN,
+	output wire [DATA_WIDTH-1:0] DATA_OUT,
+	output wire [LAST_WIDTH-1:0] LAST_OUT,
+	output wire EMPTY
+);
+	wire[DATA_WIDTH-1:0] OUT_DECODED;
+	wire OUT_DECODED_VALID;
+	wire[LAST_WIDTH-1:0] OUT_DECODED_LAST;
+	wire OUT_DATA_READY, OUT_LAST_READY;
+
+	lpc_decoder decoder(
+			.ACLK(ACLK),
+			.ARESET_N(ARESET_N),
+			.TDATA(TDATA),
+			.TVALID(TVALID),
+			.TREADY(TREADY),
+			.TUSER(TUSER),
+			.TLAST(TLAST),
+			
+			.OUT_DATA(OUT_DECODED),
+			.OUT_VALID(OUT_DECODED_VALID),
+			.OUT_READY(~OUT_DATA_READY&~OUT_LAST_READY),
+			.OUT_LAST(OUT_DECODED_LAST)
+			);
+	synchronous_fifo #(.DEPTH(DEPTH), .DATA_WIDTH(DATA_WIDTH)) fifo_data(
+			.ACLK(ACLK),
+			.ARESET_N(ARESET_N),
+			.WR_EN(OUT_DECODED_VALID),
+			.RD_EN(RD_EN),
+			.DATA_IN(OUT_DECODED),
+			.FULL(OUT_DATA_READY),
+			.EMPTY(EMPTY),
+			.DATA_OUT(DATA_OUT)
+			);
+
+	synchronous_fifo #(.DEPTH(DEPTH), .DATA_WIDTH(LAST_WIDTH)) fifo_last(
+			.ACLK(ACLK),
+			.ARESET_N(ARESET_N),
+			.WR_EN(OUT_DECODED_VALID),
+			.RD_EN(RD_EN),
+			.DATA_IN(OUT_DECODED_LAST),
+			.FULL(OUT_LAST_READY),
+			.EMPTY(EMPTY),
+			.DATA_OUT(LAST_OUT)
+			);
+
+endmodule
+

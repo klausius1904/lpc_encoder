@@ -12,4 +12,4 @@ add wave *
 add wave -position end  sim:/decoder_tb/uut/err_pos_row_reg
 add wave -position end  sim:/decoder_tb/uut/err_pos_col_reg
 
-run 100000
+run -all

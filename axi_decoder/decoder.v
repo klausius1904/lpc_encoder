@@ -141,6 +141,7 @@ module lpc_decoder(
 						ph_nxt=0;
 						pv_nxt=0;
 						data_nxt=0;
+						out_last_nxt=0;
 					end else begin
 						valid_nxt=1;
 						ready_nxt=0;
