@@ -78,3 +78,4 @@ assign RD_DATA = data_reg;
 assign FIFO_EMPTY = (rd_cnt_reg == wr_cnt_reg) && (rd_flag_reg == wr_flag_reg);
 assign FIFO_FULL =  (rd_cnt_reg == wr_cnt_reg) && (rd_flag_reg != wr_flag_reg);
 endmodule
+

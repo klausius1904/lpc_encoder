@@ -1,4 +1,27 @@
-{C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder.v} {1 {vlog -work work -stats=none {C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder.v}
+{C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/fifo.v} {1 {vlog -work work -stats=none {C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/fifo.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module synchronous_fifo
+
+Top level modules:
+	synchronous_fifo
+
+} {} {}} {C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder_fifo.v} {1 {vlog -work work -stats=none {C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder_fifo.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module lpc_decoder
+-- Compiling module synchronous_fifo
+-- Compiling module decoder_fifo
+
+Top level modules:
+	decoder_fifo
+
+} {} {}} {C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder_fifo_tb.v} {1 {vlog -work work -stats=none {C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder_fifo_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module decoder_fifo_tb
+
+Top level modules:
+	decoder_fifo_tb
+
+} {} {}} {C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder.v} {1 {vlog -work work -stats=none {C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/decoder.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module lpc_decoder
 

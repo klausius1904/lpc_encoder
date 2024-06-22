@@ -1,104 +1,57 @@
-do run_decoder_fifo.txt
-# decoder_fifo.v decoder_fifo_tb.v
-# decoder_fifo_tb
+# Compile of decoder.v was successful.
+# Compile of decoder_tb.v was successful.
+# Compile of fifo.v was successful.
+# Compile of decoder_fifo.v was successful.
+# Compile of decoder_fifo_tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:28:30 on May 30,2024
-# vlog -reportprogress 300 decoder_fifo.v decoder_fifo_tb.v 
+# Start time: 12:04:36 on Jun 03,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
 # -- Compiling module lpc_decoder
-# -- Compiling module synchronous_fifo
-# -- Compiling module decoder_fifo
-# -- Compiling module decoder_fifo_tb
+# -- Compiling module decoder_tb
 # 
 # Top level modules:
-# 	decoder_fifo_tb
-# End time: 19:28:30 on May 30,2024, Elapsed time: 0:00:00
+# 	decoder_tb
+# End time: 12:04:36 on Jun 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" decoder_fifo_tb 
-# Start time: 19:28:30 on May 30,2024
-# Loading work.decoder_fifo_tb
-# Loading work.decoder_fifo
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 12:04:36 on Jun 03,2024
+# Loading work.decoder_tb
 # Loading work.lpc_decoder
-# Loading work.synchronous_fifo
-# Break key hit
-# Simulation stop requested.
-do run_decoder_fifo.txt
-# decoder_fifo.v decoder_fifo_tb.v
-# decoder_fifo_tb
-# End time: 19:36:08 on May 30,2024, Elapsed time: 0:07:38
-# Errors: 0, Warnings: 2
+# ** Note: $finish    : decoder_tb.v(78)
+#    Time: 2591835 ns  Iteration: 1  Instance: /decoder_tb
+# 1
+# Break in Module decoder_tb at decoder_tb.v line 78
+quit -sim
+# End time: 12:05:20 on Jun 03,2024, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 3
+DO run_decoder.txt
+# invalid command name "DO"
+do run_decoder.txt
+# decoder.v decoder_tb.v
+# decoder_tb
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:36:08 on May 30,2024
-# vlog -reportprogress 300 decoder_fifo.v decoder_fifo_tb.v 
+# Start time: 12:05:48 on Jun 03,2024
+# vlog -reportprogress 300 decoder.v decoder_tb.v 
 # -- Compiling module lpc_decoder
-# -- Compiling module synchronous_fifo
-# -- Compiling module decoder_fifo
-# -- Compiling module decoder_fifo_tb
+# -- Compiling module decoder_tb
 # 
 # Top level modules:
-# 	decoder_fifo_tb
-# End time: 19:36:08 on May 30,2024, Elapsed time: 0:00:00
+# 	decoder_tb
+# End time: 12:05:48 on Jun 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" decoder_fifo_tb 
-# Start time: 19:36:09 on May 30,2024
-# Loading work.decoder_fifo_tb
-# Loading work.decoder_fifo
+# vsim -voptargs="+acc" decoder_tb 
+# Start time: 12:05:48 on Jun 03,2024
+# Loading work.decoder_tb
 # Loading work.lpc_decoder
-# Loading work.synchronous_fifo
-# Break key hit
-# Simulation stop requested.
-do run_decoder_fifo.txt
-# decoder_fifo.v decoder_fifo_tb.v
-# decoder_fifo_tb
-# End time: 19:38:31 on May 30,2024, Elapsed time: 0:02:22
-# Errors: 0, Warnings: 1
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:38:32 on May 30,2024
-# vlog -reportprogress 300 decoder_fifo.v decoder_fifo_tb.v 
-# -- Compiling module lpc_decoder
-# -- Compiling module synchronous_fifo
-# -- Compiling module decoder_fifo
-# -- Compiling module decoder_fifo_tb
-# 
-# Top level modules:
-# 	decoder_fifo_tb
-# End time: 19:38:32 on May 30,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" decoder_fifo_tb 
-# Start time: 19:38:32 on May 30,2024
-# Loading work.decoder_fifo_tb
-# Loading work.decoder_fifo
-# Loading work.lpc_decoder
-# Loading work.synchronous_fifo
-# ** Error: (vsim-3043) Unresolved reference to 'OUT_DECODED'.
-#    Time: 0 ns  Iteration: 0  Instance: /decoder_fifo_tb File: decoder_fifo_tb.v Line: 84
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./run_decoder_fifo.txt PAUSED at line 10
-do run_decoder_fifo.txt
-# decoder_fifo.v decoder_fifo_tb.v
-# decoder_fifo_tb
-# End time: 19:38:56 on May 30,2024, Elapsed time: 0:00:24
-# Errors: 1, Warnings: 1
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:38:56 on May 30,2024
-# vlog -reportprogress 300 decoder_fifo.v decoder_fifo_tb.v 
-# -- Compiling module lpc_decoder
-# -- Compiling module synchronous_fifo
-# -- Compiling module decoder_fifo
-# -- Compiling module decoder_fifo_tb
-# 
-# Top level modules:
-# 	decoder_fifo_tb
-# End time: 19:38:56 on May 30,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" decoder_fifo_tb 
-# Start time: 19:38:56 on May 30,2024
-# Loading work.decoder_fifo_tb
-# Loading work.decoder_fifo
-# Loading work.lpc_decoder
-# Loading work.synchronous_fifo
-# ** Note: $finish    : decoder_fifo_tb.v(88)
-#    Time: 2591795 ns  Iteration: 1  Instance: /decoder_fifo_tb
-# End time: 19:39:05 on May 30,2024, Elapsed time: 0:00:09
-# Errors: 0, Warnings: 0
+# ** Note: $finish    : decoder_tb.v(78)
+#    Time: 1619895 ns  Iteration: 1  Instance: /decoder_tb
+# 1
+# Break in Module decoder_tb at decoder_tb.v line 78
+quit -sim
+# End time: 12:08:14 on Jun 03,2024, Elapsed time: 0:02:26
+# Errors: 0, Warnings: 3
+# Closing project C:/Users/gklau/Desktop/New folder/lpc_encoder/axi_decoder/LPC_DECODER.mpf

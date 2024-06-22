@@ -12,7 +12,7 @@ module decoder_fifo_tb;
 	reg RD_EN;
 	wire [15:0] DATA_OUT;
 	wire LAST_OUT;
-	wire EMPTY;
+	wire FIFO_EMPTY;
 
 	integer data_file;
 	integer write_file;
@@ -32,7 +32,8 @@ module decoder_fifo_tb;
 									.RD_EN(RD_EN),
 									.DATA_OUT(DATA_OUT),
 									.LAST_OUT(LAST_OUT),
-									.EMPTY(EMPTY)
+									.FIFO_EMPTY(FIFO_EMPTY),
+									.EN(EN)
 										);
 	always #5 ACLK = ~ACLK;
 	initial begin
@@ -43,7 +44,7 @@ module decoder_fifo_tb;
 		TLAST=0;
 		cnt_reg=0;
 		isStart=1;
-		RD_EN=1;
+		RD_EN=0;
 		#20 ARESET_N=1;
 	end
 	
@@ -62,31 +63,31 @@ module decoder_fifo_tb;
 
 
 	always@(posedge ACLK or negedge ARESET_N)begin
-		if(ARESET_N && TREADY)begin
-		scan_file=$fscanf(data_file,"%b\n", TDATA);
-		if(!$feof(data_file))begin
-			cnt_reg=cnt_reg+1;
-			if(cnt_reg==1920)begin
-				cnt_reg=0;
-				TLAST=1;
-			end else begin
-				TLAST=0;
-			end
-			TVALID=1;
+		if(ARESET_N && TREADY && ~RD_EN)begin
+			scan_file=$fscanf(data_file,"%b\n", TDATA);
+			if(!$feof(data_file))begin
+				cnt_reg=cnt_reg+1;
+				if(cnt_reg==1920)begin
+					cnt_reg=0;
+					TLAST=1;
+				end else begin
+					TLAST=0;
+				end
+				TVALID=1;
 			
-		end
-		else begin
+			end
+			else begin
 			$fclose(data_file);
 			TVALID=0;
+			end
 		end
-	end
-	if(~EMPTY)begin
-		$fwrite(write_file, "%b\n", OUT_DECODED);
-		if(~TVALID)begin
-			$fclose(data_file);
-			$fclose(write_file);
-			$finish;
+		if(~FIFO_EMPTY && RD_EN)begin
+			$fwrite(write_file, "%b\n", DATA_OUT);
+			if(~TVALID)begin
+				$fclose(data_file);
+		 		$fclose(write_file);
+				$finish;
+			end
 		end
-	end
 	end
 endmodule

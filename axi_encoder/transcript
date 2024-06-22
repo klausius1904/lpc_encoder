@@ -1,0 +1,342 @@
+# Compile of encoder.v was successful.
+# Compile of encoder_fifo.v was successful.
+do run_encoder_fifo.txt
+# encoder_fifo.v encoder_fifo_tb.v
+# encoder_fifo_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:37:40 on Jun 22,2024
+# vlog -reportprogress 300 encoder_fifo.v encoder_fifo_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module synchronous_fifo
+# -- Compiling module encoder_fifo
+# -- Compiling module encoder_fifo_tb
+# 
+# Top level modules:
+# 	encoder_fifo_tb
+# End time: 00:37:40 on Jun 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_fifo_tb 
+# Start time: 00:37:40 on Jun 22,2024
+# Loading work.encoder_fifo_tb
+# Loading work.encoder_fifo
+# Loading work.lpc_encoder
+# Loading work.synchronous_fifo
+# ** Error (suppressible): (vsim-3389) Port 'FIFO_EMPTY' not found in the connected module (12th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# ** Error (suppressible): (vsim-3389) Port 'EN' not found in the connected module (13th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (80) for port 'TDATA'. The port definition is at: encoder_fifo.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (80) does not match connection size (16) for port 'OUT_DATA'. The port definition is at: encoder.v(15).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut/encoder File: encoder_fifo.v Line: 26
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run_encoder_fifo.txt PAUSED at line 10
+do run_encoder_fifo.txt
+# encoder_fifo.v encoder_fifo_tb.v
+# encoder_fifo_tb
+# End time: 00:41:01 on Jun 22,2024, Elapsed time: 0:03:21
+# Errors: 2, Warnings: 7
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:41:01 on Jun 22,2024
+# vlog -reportprogress 300 encoder_fifo.v encoder_fifo_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module synchronous_fifo
+# -- Compiling module encoder_fifo
+# -- Compiling module encoder_fifo_tb
+# 
+# Top level modules:
+# 	encoder_fifo_tb
+# End time: 00:41:01 on Jun 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_fifo_tb 
+# Start time: 00:41:02 on Jun 22,2024
+# Loading work.encoder_fifo_tb
+# Loading work.encoder_fifo
+# Loading work.lpc_encoder
+# Loading work.synchronous_fifo
+# ** Error (suppressible): (vsim-3389) Port 'FIFO_EMPTY' not found in the connected module (12th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# ** Error (suppressible): (vsim-3389) Port 'EN' not found in the connected module (13th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (80) for port 'DATA_OUT'. The port definition is at: encoder_fifo.v(13).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (80) does not match connection size (16) for port 'OUT_DATA'. The port definition is at: encoder.v(15).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut/encoder File: encoder_fifo.v Line: 26
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run_encoder_fifo.txt PAUSED at line 10
+DO run_encoder_fifo.txt
+# invalid command name "DO"
+do run_encoder_fifo.txt
+# encoder_fifo.v encoder_fifo_tb.v
+# encoder_fifo_tb
+# End time: 00:42:03 on Jun 22,2024, Elapsed time: 0:01:01
+# Errors: 2, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:42:03 on Jun 22,2024
+# vlog -reportprogress 300 encoder_fifo.v encoder_fifo_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module synchronous_fifo
+# -- Compiling module encoder_fifo
+# -- Compiling module encoder_fifo_tb
+# 
+# Top level modules:
+# 	encoder_fifo_tb
+# End time: 00:42:03 on Jun 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_fifo_tb 
+# Start time: 00:42:03 on Jun 22,2024
+# Loading work.encoder_fifo_tb
+# Loading work.encoder_fifo
+# Loading work.lpc_encoder
+# Loading work.synchronous_fifo
+# ** Error (suppressible): (vsim-3389) Port 'FIFO_EMPTY' not found in the connected module (12th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# ** Error (suppressible): (vsim-3389) Port 'EN' not found in the connected module (13th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (80) does not match connection size (16) for port 'OUT_DATA'. The port definition is at: encoder.v(15).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut/encoder File: encoder_fifo.v Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (80) for port 'RD_DATA'. The port definition is at: fifo.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut/fifo_data File: encoder_fifo.v Line: 41
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run_encoder_fifo.txt PAUSED at line 10
+do run_encoder_fifo.txt
+# encoder_fifo.v encoder_fifo_tb.v
+# encoder_fifo_tb
+# End time: 00:43:08 on Jun 22,2024, Elapsed time: 0:01:05
+# Errors: 2, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:43:08 on Jun 22,2024
+# vlog -reportprogress 300 encoder_fifo.v encoder_fifo_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module synchronous_fifo
+# -- Compiling module encoder_fifo
+# -- Compiling module encoder_fifo_tb
+# 
+# Top level modules:
+# 	encoder_fifo_tb
+# End time: 00:43:08 on Jun 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_fifo_tb 
+# Start time: 00:43:08 on Jun 22,2024
+# Loading work.encoder_fifo_tb
+# Loading work.encoder_fifo
+# Loading work.lpc_encoder
+# Loading work.synchronous_fifo
+# ** Error (suppressible): (vsim-3389) Port 'FIFO_EMPTY' not found in the connected module (12th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# ** Error (suppressible): (vsim-3389) Port 'EN' not found in the connected module (13th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (80) for port 'WR_DATA'. The port definition is at: fifo.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut/fifo_data File: encoder_fifo.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (80) for port 'RD_DATA'. The port definition is at: fifo.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut/fifo_data File: encoder_fifo.v Line: 41
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run_encoder_fifo.txt PAUSED at line 10
+DO run_encoder_fifo.txt
+# invalid command name "DO"
+do run_encoder_fifo.txt
+# encoder_fifo.v encoder_fifo_tb.v
+# encoder_fifo_tb
+# End time: 00:45:39 on Jun 22,2024, Elapsed time: 0:02:31
+# Errors: 2, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:40 on Jun 22,2024
+# vlog -reportprogress 300 encoder_fifo.v encoder_fifo_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module synchronous_fifo
+# -- Compiling module encoder_fifo
+# -- Compiling module encoder_fifo_tb
+# 
+# Top level modules:
+# 	encoder_fifo_tb
+# End time: 00:45:40 on Jun 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_fifo_tb 
+# Start time: 00:45:40 on Jun 22,2024
+# Loading work.encoder_fifo_tb
+# Loading work.encoder_fifo
+# Loading work.lpc_encoder
+# Loading work.synchronous_fifo
+# ** Error: (vsim-3063) Port 'FIFO_EMPTY' not found in the connected module (12th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (80) for port 'WR_DATA'. The port definition is at: fifo.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut/fifo_data File: encoder_fifo.v Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (80) for port 'RD_DATA'. The port definition is at: fifo.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut/fifo_data File: encoder_fifo.v Line: 41
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run_encoder_fifo.txt PAUSED at line 10
+do run_encoder_fifo.txt
+# encoder_fifo.v encoder_fifo_tb.v
+# encoder_fifo_tb
+# End time: 00:48:17 on Jun 22,2024, Elapsed time: 0:02:37
+# Errors: 1, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:48:18 on Jun 22,2024
+# vlog -reportprogress 300 encoder_fifo.v encoder_fifo_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module synchronous_fifo
+# -- Compiling module encoder_fifo
+# -- Compiling module encoder_fifo_tb
+# 
+# Top level modules:
+# 	encoder_fifo_tb
+# End time: 00:48:18 on Jun 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_fifo_tb 
+# Start time: 00:48:18 on Jun 22,2024
+# Loading work.encoder_fifo_tb
+# Loading work.encoder_fifo
+# Loading work.lpc_encoder
+# Loading work.synchronous_fifo
+# ** Error: (vsim-3063) Port 'FIFO_EMPTY' not found in the connected module (12th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /encoder_fifo_tb/uut File: encoder_fifo_tb.v Line: 25
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run_encoder_fifo.txt PAUSED at line 10
+do run_encoder_fifo.txt
+# encoder_fifo.v encoder_fifo_tb.v
+# encoder_fifo_tb
+# End time: 00:49:49 on Jun 22,2024, Elapsed time: 0:01:31
+# Errors: 1, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:49:50 on Jun 22,2024
+# vlog -reportprogress 300 encoder_fifo.v encoder_fifo_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module synchronous_fifo
+# -- Compiling module encoder_fifo
+# -- Compiling module encoder_fifo_tb
+# 
+# Top level modules:
+# 	encoder_fifo_tb
+# End time: 00:49:50 on Jun 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_fifo_tb 
+# Start time: 00:49:50 on Jun 22,2024
+# Loading work.encoder_fifo_tb
+# Loading work.encoder_fifo
+# Loading work.lpc_encoder
+# Loading work.synchronous_fifo
+# Break key hit
+# Simulation stop requested.
+quit -sim
+# End time: 00:53:49 on Jun 22,2024, Elapsed time: 0:03:59
+# Errors: 0, Warnings: 1
+do run_encoder_fifo.txt
+# encoder_fifo.v encoder_fifo_tb.v
+# encoder_fifo_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:54:27 on Jun 22,2024
+# vlog -reportprogress 300 encoder_fifo.v encoder_fifo_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module synchronous_fifo
+# -- Compiling module encoder_fifo
+# -- Compiling module encoder_fifo_tb
+# 
+# Top level modules:
+# 	encoder_fifo_tb
+# End time: 00:54:27 on Jun 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_fifo_tb 
+# Start time: 00:54:27 on Jun 22,2024
+# Loading work.encoder_fifo_tb
+# Loading work.encoder_fifo
+# Loading work.lpc_encoder
+# Loading work.synchronous_fifo
+# Break key hit
+# Break in Module encoder_fifo_tb at encoder_fifo_tb.v line 39
+do run_encoder_fifo.txt
+# encoder_fifo.v encoder_fifo_tb.v
+# encoder_fifo_tb
+# End time: 00:56:27 on Jun 22,2024, Elapsed time: 0:02:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:56:28 on Jun 22,2024
+# vlog -reportprogress 300 encoder_fifo.v encoder_fifo_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module synchronous_fifo
+# -- Compiling module encoder_fifo
+# -- Compiling module encoder_fifo_tb
+# 
+# Top level modules:
+# 	encoder_fifo_tb
+# End time: 00:56:28 on Jun 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_fifo_tb 
+# Start time: 00:56:28 on Jun 22,2024
+# Loading work.encoder_fifo_tb
+# Loading work.encoder_fifo
+# Loading work.lpc_encoder
+# Loading work.synchronous_fifo
+# Break key hit
+# Simulation stop requested.
+quit -sim
+# End time: 16:51:07 on Jun 22,2024, Elapsed time: 15:54:39
+# Errors: 0, Warnings: 1
+fo run_encoder_fifo.txt
+# ambiguous command name "fo": focus font for force foreach foreachGridWindow foreachSignalsWindow foreachTree foreachVariablesWindow foreachWatchWindow foreachWaveWindow foreachWindow foreachWindowType format formatTime format_vsim_error
+do run_encoder_fifo.txt
+# encoder_fifo.v encoder_fifo_tb.v
+# encoder_fifo_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:56:11 on Jun 22,2024
+# vlog -reportprogress 300 encoder_fifo.v encoder_fifo_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module synchronous_fifo
+# -- Compiling module encoder_fifo
+# -- Compiling module encoder_fifo_tb
+# 
+# Top level modules:
+# 	encoder_fifo_tb
+# End time: 16:56:12 on Jun 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_fifo_tb 
+# Start time: 16:56:12 on Jun 22,2024
+# Loading work.encoder_fifo_tb
+# Loading work.encoder_fifo
+# Loading work.lpc_encoder
+# Loading work.synchronous_fifo
+# Break key hit
+# Break in Module encoder_fifo_tb at encoder_fifo_tb.v line 68
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+quit -sim
+# End time: 17:49:45 on Jun 22,2024, Elapsed time: 0:53:33
+# Errors: 0, Warnings: 2
+do run_encoder_fifo.txt
+# encoder_fifo.v encoder_fifo_tb.v
+# encoder_fifo_tb
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:50:33 on Jun 22,2024
+# vlog -reportprogress 300 encoder_fifo.v encoder_fifo_tb.v 
+# -- Compiling module lpc_encoder
+# -- Compiling module synchronous_fifo
+# -- Compiling module encoder_fifo
+# -- Compiling module encoder_fifo_tb
+# 
+# Top level modules:
+# 	encoder_fifo_tb
+# End time: 17:50:34 on Jun 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" encoder_fifo_tb 
+# Start time: 17:50:34 on Jun 22,2024
+# Loading work.encoder_fifo_tb
+# Loading work.encoder_fifo
+# Loading work.lpc_encoder
+# Loading work.synchronous_fifo
+# Break key hit
+# Break in Module encoder_fifo_tb at encoder_fifo_tb.v line 69
+# End time: 17:51:22 on Jun 22,2024, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 2

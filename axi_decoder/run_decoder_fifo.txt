@@ -11,6 +11,6 @@ vsim -voptargs=+acc $topmodule
 add wave *
 add wave -position 3  sim:/decoder_fifo_tb/uut/decoder/OUT_DECODED
 add wave -position 4  sim:/decoder_fifo_tb/uut/decoder/OUT_VALID
-add wave -position 5  sim:/decoder_fifo_tb/uut/fifo_data/FULL
+add wave -position 5  sim:/decoder_fifo_tb/uut/fifo_data/FIFO_FULL
 
-run -all
+run 50000

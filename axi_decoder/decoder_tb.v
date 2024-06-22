@@ -9,6 +9,7 @@ reg TVALID;
 reg TUSER;
 wire TREADY;
 reg TLAST;
+reg EN;
 
 wire [15:0] OUT_DECODED;
 wire OUT_VALID;
@@ -31,6 +32,7 @@ initial begin
 	TLAST=0;
 	TUSER=0;
 	cnt_reg=0;
+	EN=0;
 	OUT_READY=1;
  	#20 ARESET_N=1;
 
@@ -73,7 +75,7 @@ always@(posedge ACLK or negedge ARESET_N)begin
 		if(~TVALID)begin
 			$fclose(data_file);
 			$fclose(write_file);
-			//$finish;
+			$finish;
 		end
 	end
 end
@@ -89,6 +91,7 @@ lpc_decoder uut(
 		.OUT_DECODED(OUT_DECODED),
 		.OUT_LAST(OUT_LAST),
 		.OUT_READY(OUT_READY),
-		.OUT_VALID(OUT_VALID)
+		.OUT_VALID(OUT_VALID),
+		.EN(EN)
 		);
 endmodule

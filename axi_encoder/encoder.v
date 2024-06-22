@@ -11,6 +11,7 @@ module lpc_encoder
 	
 	output wire OUT_VALID,
 	output wire OUT_LAST,
+	output wire OUT_USER,
 	output wire [79:0] OUT_DATA,
 	input wire OUT_READY
 	
@@ -26,6 +27,7 @@ module lpc_encoder
 	reg ready_reg, ready_nxt;
 	reg out_valid_reg, out_valid_nxt;
 	reg[4:0] last_reg, last_nxt;
+	reg[4:0] user_reg, user_nxt;
 
 	reg [3:0] idx;
 
@@ -41,6 +43,7 @@ module lpc_encoder
 			ready_reg<=1;
 			out_valid_reg<=0;
 			last_reg<=0;
+			user_reg<=0;
 			
 		end
 		else begin
@@ -54,6 +57,7 @@ module lpc_encoder
 			ready_reg<=ready_nxt;
 			out_valid_reg<=out_valid_nxt;
 			last_reg<=last_nxt;
+			user_reg<=user_nxt;
 		end
 	end
 	
@@ -68,6 +72,7 @@ module lpc_encoder
 		ready_nxt=ready_reg;
 		out_valid_nxt=out_valid_reg;
 		last_nxt=last_reg;
+		user_nxt=user_reg;
 		
 		if(TVALID&TREADY)begin
 			if(TUSER)begin
@@ -83,6 +88,7 @@ module lpc_encoder
 				ready_nxt=1;
 				out_valid_nxt=0;
 				last_nxt[0]=TLAST;
+				user_nxt[0]=TUSER;
 			end
 			else begin
 				src_nxt[2*cnt_reg]=TDATA[15:8];
@@ -90,6 +96,7 @@ module lpc_encoder
 				pv_nxt[2*cnt_reg]=^TDATA[15:8];
 				pv_nxt[2*cnt_reg+1]=^TDATA[7:0];	
 				last_nxt[cnt_reg]=TLAST;
+				user_nxt[cnt_reg]=TUSER;
 				for(idx=0; idx<8; idx=idx+1)begin
 					ph_nxt[idx]=ph_reg[idx]^TDATA[idx]^TDATA[idx+8];
 				end
@@ -119,11 +126,13 @@ module lpc_encoder
 			encoded_nxt=0;
 			out_valid_nxt=0;
 			last_nxt=0;
+			user_nxt=0;
 		end
 	end
 assign TREADY=ready_reg;
 assign OUT_VALID=out_valid_reg;
 assign OUT_DATA=encoded_reg;
 assign OUT_LAST=|last_reg;
+assign OUT_USER=|user_reg;
 endmodule
 
