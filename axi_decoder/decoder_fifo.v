@@ -1,6 +1,6 @@
 `include "decoder.v"
 `include "fifo.v"
-module decoder_fifo #(parameter DEPTH=128, DATA_WIDTH=16, LAST_WIDTH=1)(
+module decoder_fifo #(parameter DEPTH=128, DATA_WIDTH=16)(
 	input wire ACLK,
 	input wire ARESET_N,
 	input wire [79:0] TDATA,
@@ -12,13 +12,14 @@ module decoder_fifo #(parameter DEPTH=128, DATA_WIDTH=16, LAST_WIDTH=1)(
 	
 	input wire RD_EN,
 	output wire [DATA_WIDTH-1:0] DATA_OUT,
-	output wire [LAST_WIDTH-1:0] LAST_OUT,
+	output wire LAST_OUT,
+	output wire USER_OUT,
 	output wire FIFO_EMPTY
 );
 	wire[DATA_WIDTH-1:0] OUT_DECODED;
 	wire OUT_DECODED_VALID;
-	wire[LAST_WIDTH-1:0] OUT_DECODED_LAST;
-	wire OUT_DATA_READY, OUT_LAST_READY;
+	wire OUT_DECODED_LAST, OUT_DECODED_USER;
+	wire OUT_DATA_READY, OUT_LAST_READY, OUT_USER_READY;
 	
 
 	wire DATA_EMPTY, LAST_EMPTY;
@@ -34,8 +35,9 @@ module decoder_fifo #(parameter DEPTH=128, DATA_WIDTH=16, LAST_WIDTH=1)(
 			
 			.OUT_DECODED(OUT_DECODED),
 			.OUT_VALID(OUT_DECODED_VALID),
-			.OUT_READY(~OUT_DATA_READY&~OUT_LAST_READY),
-			.OUT_LAST(OUT_DECODED_LAST)
+			.OUT_READY(~OUT_DATA_READY&~OUT_LAST_READY&~OUT_USER_READY),
+			.OUT_LAST(OUT_DECODED_LAST),
+			.OUT_USER(OUT_DECODED_USER)
 			);
 	synchronous_fifo #(.DEPTH(DEPTH), .DATA_WIDTH(DATA_WIDTH)) fifo_data(
 			.ACLK(ACLK),
@@ -48,7 +50,7 @@ module decoder_fifo #(parameter DEPTH=128, DATA_WIDTH=16, LAST_WIDTH=1)(
 			.RD_DATA(DATA_OUT)
 			);
 
-	synchronous_fifo #(.DEPTH(DEPTH), .DATA_WIDTH(LAST_WIDTH)) fifo_last(
+	synchronous_fifo #(.DEPTH(DEPTH), .DATA_WIDTH(1)) fifo_last(
 			.ACLK(ACLK),
 			.ARESET_N(ARESET_N),
 			.WR_EN(OUT_DECODED_VALID),
@@ -58,7 +60,17 @@ module decoder_fifo #(parameter DEPTH=128, DATA_WIDTH=16, LAST_WIDTH=1)(
 			.FIFO_EMPTY(LAST_EMPTY),
 			.RD_DATA(LAST_OUT)
 			);
+	synchronous_fifo #(.DEPTH(DEPTH), .DATA_WIDTH(1)) fifo_user(
+			.ACLK(ACLK),
+			.ARESET_N(ARESET_N),
+			.WR_EN(OUT_DECODED_VALID),
+			.RD_EN(RD_EN),
+			.WR_DATA(OUT_DECODED_USER),
+			.FIFO_FULL(OUT_USER_READY),
+			.FIFO_EMPTY(USER_EMPTY),
+			.RD_DATA(USER_OUT)
+			);
 
-assign FIFO_EMPTY=DATA_EMPTY|LAST_EMPTY;
+assign FIFO_EMPTY=DATA_EMPTY|LAST_EMPTY|USER_EMPTY;
 endmodule
 

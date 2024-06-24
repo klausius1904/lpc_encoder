@@ -11,7 +11,8 @@ module lpc_decoder(
 			output wire[15:0] OUT_DECODED,
 			output wire OUT_VALID,
 			input wire OUT_READY,
-			output wire OUT_LAST
+			output wire OUT_LAST,
+			output wire OUT_USER
 		);
 	localparam RECEIVE_STATE=3'b000;
 	localparam SYNDROME_STATE=3'b001;
@@ -27,6 +28,7 @@ module lpc_decoder(
 	reg[7:0] pv_reg, pv_nxt;
 	reg[3:0] cnt_reg, cnt_nxt;
 	reg [3:0] out_last_reg, out_last_nxt;
+	reg [3:0] out_user_reg, out_user_nxt;
 
 	reg[3:0] idx;
 	reg[4:0] err_pos_row_reg, err_pos_row_nxt;
@@ -44,6 +46,7 @@ module lpc_decoder(
 			err_pos_col_reg<=8;
 			cnt_reg<=0;
 			out_last_reg<=0;
+			out_user_reg<=0;
 
 		end else begin
 			data_reg<=data_nxt;
@@ -56,6 +59,7 @@ module lpc_decoder(
 			err_pos_col_reg<=err_pos_col_nxt;
 			cnt_reg<=cnt_nxt;
 			out_last_reg<=out_last_nxt;
+			out_user_reg<=out_user_nxt;
 		
 		end
 	end
@@ -70,12 +74,14 @@ module lpc_decoder(
 		err_pos_col_nxt=err_pos_col_reg;
 		cnt_nxt=cnt_reg;
 		out_last_nxt=out_last_reg;
+		out_user_nxt=out_user_reg;
 
 		case(state_reg)
 			RECEIVE_STATE: begin
 				if(TREADY&TVALID)begin
 					data_nxt=TDATA;
 					out_last_nxt={TLAST, 3'b0};
+					out_user_nxt={3'b0, TUSER};
 					ready_nxt=0;
 					valid_nxt=0;
 					pv_nxt=0;
@@ -86,7 +92,7 @@ module lpc_decoder(
 						state_nxt=SYNDROME_STATE;
 					end else begin
 						state_nxt=TRANSMIT_STATE;
-						valid_nxt
+						valid_nxt=1;
 					end
 				end
 			end
@@ -165,4 +171,5 @@ assign TREADY=ready_reg;
 assign OUT_VALID=valid_reg;
 assign OUT_DECODED= {data_reg[7:0],data_reg[15:8]};
 assign OUT_LAST = out_last_reg[0];
+assign OUT_USER = out_user_reg[0];
 endmodule

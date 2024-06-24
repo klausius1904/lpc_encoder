@@ -8,10 +8,12 @@ module decoder_fifo_tb;
 	wire TREADY;
 	reg TUSER;
 	reg TLAST;
+	reg EN;
 	
 	reg RD_EN;
 	wire [15:0] DATA_OUT;
 	wire LAST_OUT;
+	wire USER_OUT;
 	wire FIFO_EMPTY;
 
 	integer data_file;
@@ -21,7 +23,7 @@ module decoder_fifo_tb;
 	reg isStart;
 	`define NULL 0
 
-	decoder_fifo #(.DEPTH(128), .DATA_WIDTH(16), .LAST_WIDTH(1)) uut(
+	decoder_fifo #(.DEPTH(128), .DATA_WIDTH(16))uut(
 									.ACLK(ACLK),
 									.ARESET_N(ARESET_N),
 									.TDATA(TDATA),
@@ -32,6 +34,7 @@ module decoder_fifo_tb;
 									.RD_EN(RD_EN),
 									.DATA_OUT(DATA_OUT),
 									.LAST_OUT(LAST_OUT),
+									.USER_OUT(USER_OUT),
 									.FIFO_EMPTY(FIFO_EMPTY),
 									.EN(EN)
 									);
@@ -44,7 +47,8 @@ module decoder_fifo_tb;
 		TLAST=0;
 		cnt_reg=0;
 		isStart=1;
-		RD_EN=0;
+		RD_EN=1;
+		EN=1;
 		#20 ARESET_N=1;
 	end
 	
@@ -63,7 +67,7 @@ module decoder_fifo_tb;
 
 
 	always@(posedge ACLK or negedge ARESET_N)begin
-		if(ARESET_N && TREADY && ~RD_EN)begin
+		if(ARESET_N && TREADY)begin
 			scan_file=$fscanf(data_file,"%b\n", TDATA);
 			if(!$feof(data_file))begin
 				cnt_reg=cnt_reg+1;
@@ -74,6 +78,12 @@ module decoder_fifo_tb;
 					TLAST=0;
 				end
 				TVALID=1;
+				if(isStart==1)begin
+					TUSER=1;
+					isStart=0;
+				end else begin	
+					TUSER=0;
+				end
 			
 			end
 			else begin
